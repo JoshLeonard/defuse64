@@ -14,4 +14,10 @@ if ($LASTEXITCODE -ne 0) { throw "assembly failed" }
 Copy-Item build\defuse64.prg dist\defuse64.prg -Force
 if (Test-Path dist\defuse64.d64) { Remove-Item dist\defuse64.d64 }
 c1541 -format "defuse 64,d6" d64 dist\defuse64.d64 -write dist\defuse64.prg "defuse 64" | Out-Null
-Write-Host "Built dist\defuse64.prg, dist\defuse64.d64, dist\manual.html"
+
+# Print the manual to PDF with headless Chrome/Edge (skipped with a warning if
+# neither is installed).
+& (Join-Path $PSScriptRoot "tools\manual_pdf.ps1")
+if ($LASTEXITCODE -ne 0) { Write-Warning "dist\manual.pdf was not rebuilt" }
+
+Write-Host "Built dist\defuse64.prg, dist\defuse64.d64, dist\manual.html, dist\manual.pdf"

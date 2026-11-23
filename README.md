@@ -12,9 +12,11 @@ Everyone else has the manual. Nobody sees both.
   `RUN` on real hardware or an emulator.
 * [`dist/manual.html`](dist/manual.html) — the defusal manual. Print it or open
   it on another screen for the experts.
+* [`dist/manual.pdf`](dist/manual.pdf) — the same manual, typeset for US Letter
+  and ready to print.
 
-On GitHub each file page has a *Download* button; the manual has to be saved
-before a browser will render it.
+On GitHub each file page has a *Download* button; the HTML manual has to be
+saved before a browser will render it, the PDF opens straight in a viewer.
 
 Controls: WASD, the cursor keys or a joystick in port 2 to move. RETURN, SPACE or
 fire to select, cut or press. DEL or `←` to back out of a module. Push past
@@ -39,6 +41,7 @@ the edge of the modules to turn the bomb; F1 or F swaps front and back.
 ## Build
 
 Needs Python 3, Java, KickAssembler 5.x and VICE (`c1541` on PATH).
+Chrome or Edge is also used, if present, to print `dist/manual.pdf`.
 
 ```powershell
 ./build.ps1                     # set $env:KICKASS_JAR if KickAss.jar is elsewhere
@@ -46,7 +49,8 @@ Needs Python 3, Java, KickAssembler 5.x and VICE (`c1541` on PATH).
 
 `tools/gen.py` generates both `src/data.asm` (keypad columns, mazes, words,
 level table, codes) and `dist/manual.html` from the same tables, so the game and
-the manual always agree.
+the manual always agree. `tools/manual_pdf.ps1` then prints that HTML to
+`dist/manual.pdf`, and can be run on its own after editing the manual template.
 
 ## Test bot
 
