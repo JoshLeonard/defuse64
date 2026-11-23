@@ -1,0 +1,12 @@
+# Build intermediates (prg, sym, vice logs, screenshots)
+/build/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Editor / OS junk
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
