@@ -6,6 +6,9 @@ Everyone else has the manual. Nobody sees both.
 
 ## Play
 
+Everything below is also on the [latest release](../../releases/latest) page, one
+download per file.
+
 * [`dist/defuse64.prg`](dist/defuse64.prg) — autostart in VICE
   (`x64sc dist/defuse64.prg`), or
 * [`dist/defuse64.d64`](dist/defuse64.d64) — disk image: `LOAD"*",8,1` then
