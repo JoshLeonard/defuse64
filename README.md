@@ -6,10 +6,15 @@ Everyone else has the manual. Nobody sees both.
 
 ## Play
 
-* `dist/defuse64.prg`: autostart in VICE (`x64sc dist/defuse64.prg`), or
-* `dist/defuse64.d64`: `LOAD"*",8,1` then `RUN` on real hardware or an emulator.
-* `dist/manual.html`: the defusal manual. Print it or open it on another
-  screen for the experts.
+* [`dist/defuse64.prg`](dist/defuse64.prg) — autostart in VICE
+  (`x64sc dist/defuse64.prg`), or
+* [`dist/defuse64.d64`](dist/defuse64.d64) — disk image: `LOAD"*",8,1` then
+  `RUN` on real hardware or an emulator.
+* [`dist/manual.html`](dist/manual.html) — the defusal manual. Print it or open
+  it on another screen for the experts.
+
+On GitHub each file page has a *Download* button; the manual has to be saved
+before a browser will render it.
 
 Controls: WASD, the cursor keys or a joystick in port 2 to move. RETURN, SPACE or
 fire to select, cut or press. DEL or `←` to back out of a module. Push past
